@@ -20,7 +20,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="24c3907c-40e9-480f-8e9f-e6eb59038bc0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/web_app/index/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web_app/index/events.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web_app/static/img/favicon_ico/android-chrome-192x192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web_app/static/img/favicon_ico/android-chrome-512x512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web_app/static/img/favicon_ico/apple-touch-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web_app/static/img/favicon_ico/favicon-16x16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web_app/static/img/favicon_ico/favicon-32x32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web_app/static/img/favicon_ico/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web_app/static/img/favicon_ico/site.webmanifest" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web_app/static/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web_app/templates/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web_app/templates/footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web_app/templates/nav.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web_app/index/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/index/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web_app/index/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/index/views.py" afterDir="false" />
     </list>
@@ -28,6 +44,13 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -39,9 +62,15 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web_app/static/img/favicon_ico" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />

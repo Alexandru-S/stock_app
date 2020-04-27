@@ -14,25 +14,23 @@
         <link rel="stylesheet" href="{{ url_for('static', filename='css/mdb.min.css') }}">
         <!-- Your custom styles (optional) -->
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    </head>
-    <body>
-        {% include 'nav.html' %}
-        <main>{% block body %}{% endblock %}</main>
-        {% include 'footer.html' %}
-
-
-
-        <!-- Footer -->
+        <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
 
         <!-- SCRIPTS -->
         <!-- JQuery -->
         <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
-        <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+        <!-- JQuery -->
         <!-- Bootstrap tooltips -->
         <script type="text/javascript" src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
         <!-- Bootstrap core JavaScript -->
         <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
         <!-- MDB core JavaScript -->
         <script type="text/javascript" src="{{ url_for('static', filename='js/mdb.min.js') }}"></script>
+
+    </head>
+    <body>
+        {% include 'nav.html' %}
+        <main>{% block body %}{% endblock %}</main>
+        {% include 'footer.html' %}
     </body>
 </html>

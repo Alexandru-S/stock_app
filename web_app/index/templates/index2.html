@@ -1,10 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "base.html" %}
+{% block body %}
+
+
+<button id="button2">Press here</button>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script>
+    <script type="text/javascript" charset="utf-8">
+
+    socket = io.connect('http://' + document.domain + ':' + location.port + '/chat');
+        socket.on('connect', function() {
+        socket.emit('joined', {});
+    });
+    document.getElementById('button2').addEventListener("click", CheckConnection)
+    function CheckConnection(){
+        console.log("button pressed")
+        socket.emit('text', {msg: 'message from frontend'});
+
+    }
+
+    </script>
+
+
+
+{% endblock %}
+
+
+

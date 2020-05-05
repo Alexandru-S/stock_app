@@ -20,15 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="24c3907c-40e9-480f-8e9f-e6eb59038bc0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web_app/index/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/index/templates/chat.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_app/index/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/index/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web_app/index/events.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/index/events.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_app/index/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/index/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/index/templates/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/index/templates/index2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web_app/index/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/index/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/static/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web_app/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/templates/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/templates/nav.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,8 +37,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -56,6 +55,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
@@ -89,5 +89,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

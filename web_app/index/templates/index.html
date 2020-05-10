@@ -3,9 +3,9 @@
 
 <select id= "stock_selection" class="browser-default custom-select">
   <option selected>pick a stock</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
+  <option value="YHOO">YHOO</option>
+  <option value="TSLA">TSLA</option>
+  <option value="GOOG">GOOG</option>
 </select>
 
 
@@ -19,10 +19,15 @@
     });
     document.getElementById('stock_selection').addEventListener("change", selectStock)
     function selectStock(e){
-        console.log("button pressed" ,e.currentTarget)
-        socket.emit('text', {msg: 'message from frontend'});
-        socket.emit('something',{msg: 'message from 222 sfrontend'} )
+        console.log("button pressed" ,e.currentTarget.value)
+        socket.emit('text', {msg: e.currentTarget.value});
     }
+
+    socket.on('text', function(data) {
+        console.log(">>>>>>>>>>>", data)
+        //$('#chat').val($('#chat').val() + data.msg + '\n');
+        //$('#chat').scrollTop($('#chat')[0].scrollHeight);
+    });
 
     </script>
 

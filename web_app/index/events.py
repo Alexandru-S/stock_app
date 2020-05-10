@@ -1,6 +1,7 @@
 from flask import session
 from flask_socketio import emit, join_room, leave_room
 from .. import socketio
+import yfinance as yf
 
 @socketio.on('message')
 def handle_message(message):
@@ -20,11 +21,11 @@ def joined(message):
 
 @socketio.on('text', namespace='/chat')
 def text(message):
-    print("|TEXTTTTTTTTT|")
+    print("|TEXTTTTTTTTT|", message)
     """Sent by a client when the user entered a new message.
     The message is sent to all people in the room."""
-    #room = session.get('room')
-    #emit('message', {'msg': session.get('name') + ':' + message['msg']}, room=room)
+    room = session.get('room')
+    emit('message', {'msg': session.get('name') + ':' + message['msg']})
 
 
 @socketio.on('something', namespace='nothing')

@@ -1,6 +1,11 @@
 {% extends "base.html" %}
 {% block body %}
 
+<h4>Session -  {{ room }}</h4>
+
+
+
+
 <select id= "stock_selection" class="browser-default custom-select">
   <option selected>pick a stock</option>
   <option value="YHOO">YHOO</option>
@@ -22,11 +27,8 @@
         console.log("button pressed" ,e.currentTarget.value)
         socket.emit('text', {msg: e.currentTarget.value});
     }
-
-    socket.on('text', function(data) {
-        console.log(">>>>>>>>>>>", data)
-        //$('#chat').val($('#chat').val() + data.msg + '\n');
-        //$('#chat').scrollTop($('#chat')[0].scrollHeight);
+    socket.on('message', function(data) {
+        console.log("95963969397937", data)
     });
 
     </script>

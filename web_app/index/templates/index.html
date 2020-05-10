@@ -1,22 +1,30 @@
 {% extends "base.html" %}
 {% block body %}
 
-
-<div class="container mb-4">
-    <section>
-      <h4 class="text-center my-5"><strong>Categories</strong></h4>
-        <h1>Flask-SocketIO-Chat</h1>
-        <form method="POST">
-            {{ form.hidden_tag() }}
-            {{ form.name.label }}: {{ form.name() }} {% for error in form.name.errors %}{{ error }}{% endfor %}<br>
-            {{ form.room.label }}: {{ form.room() }} {% for error in form.room.errors %}{{ error }}{% endfor %}<br>
-            {{ form.submit() }}
-        </form>
+<select id= "stock_selection" class="browser-default custom-select">
+  <option selected>pick a stock</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select>
 
 
-    </section>
-</div>
 
+    <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script>
+    <script type="text/javascript" charset="utf-8">
+
+    socket = io.connect('http://' + document.domain + ':' + location.port + '/chat');
+        socket.on('connect', function() {
+        socket.emit('joined', {});
+    });
+    document.getElementById('stock_selection').addEventListener("change", selectStock)
+    function selectStock(e){
+        console.log("button pressed" ,e.currentTarget)
+        socket.emit('text', {msg: 'message from frontend'});
+        socket.emit('something',{msg: 'message from 222 sfrontend'} )
+    }
+
+    </script>
 
 
 

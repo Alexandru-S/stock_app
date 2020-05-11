@@ -13,6 +13,9 @@
   <option value="GOOG">GOOG</option>
 </select>
 
+<input value="" name="" id="stock_input" placeholder="Add ticket symbol">
+<button id="check_ticker">Check</button>
+
 
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script>
@@ -31,6 +34,14 @@
         console.log("95963969397937", data)
         console.log("--->>>", data.info)
     });
+
+
+
+    document.getElementById("check_ticker").addEventListener("click", checkTicker)
+    function checkTicker(){
+        var ticker = document.getElementById("stock_input")
+        socket.emit('text', {msg: ticker.value});
+    }
 
     </script>
 

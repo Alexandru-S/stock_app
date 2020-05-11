@@ -1,7 +1,9 @@
 from flask import session
 from flask_socketio import emit, join_room, leave_room
 from .. import socketio
+from pandas_datareader import data as pdr
 import yfinance as yf
+yf.pdr_override()
 import json
 
 @socketio.on('message')
@@ -26,7 +28,7 @@ def text(message):
     The message is sent to all people in the room."""
     print("|TEXTTTTTTTTT|", message)
     room = session.get('room')
-    ticker = str(yf.Ticker(message["msg"]))
+    ticker = pdr.get_data_yahoo(message["msg"])
 
     print('ticker', type(ticker))
     print("06848055885", room)

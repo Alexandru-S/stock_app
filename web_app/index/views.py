@@ -9,6 +9,5 @@ import yfinance as yf
 
 @index_blueprint.route('/', methods=['GET', 'POST'])
 def index():
-    print('---------')
     room = randint(0, 10)
     return render_template('index.html', room=room)

@@ -3,15 +3,28 @@
 
     <h4>Session -  {{ room }}</h4>
 
-    <select id= "stock_selection" class="browser-default custom-select">
-        <option selected>pick a stock</option>
-        <option value="YHOO">YHOO</option>
-        <option value="TSLA">TSLA</option>
-        <option value="GOOG">GOOG</option>
-    </select>
+    <svg class="targetsvg"></svg>
 
     <input value="" name="" id="stock_input" placeholder="Add ticket symbol">
     <button id="check_ticker">Check</button>
+
+
+
+<!-- Load d3.js -->
+<script src="https://d3js.org/d3.v5.js"></script>
+
+
+<script>
+var svg = d3.select(".targetsvg")
+svg.append("circle")
+  .attr("cx", 2).attr("cy", 2).attr("r", 40).style("fill", "blue");
+svg.append("circle")
+  .attr("cx", 140).attr("cy", 70).attr("r", 40).style("fill", "red");
+svg.append("circle")
+  .attr("cx", 300).attr("cy", 100).attr("r", 40).style("fill", "green");
+</script>
+
+
 
 
 
@@ -22,10 +35,7 @@
         socket.on('connect', function() {
             socket.emit('joined', {});
         });
-        document.getElementById('stock_selection').addEventListener("change", selectStock)
-        function selectStock(e){
-            socket.emit('text', {msg: e.currentTarget.value});
-        }
+
         socket.on('message', function(data) {
             console.log("JSON MESSAGE:", JSON.parse(data.msg))
             console.log("OBJECT DATA:", Object.keys(data.msg))
@@ -38,6 +48,9 @@
             socket.emit('text', {msg: ticker.value});
         }
 
+
     </script>
+
+
 
 {% endblock %}

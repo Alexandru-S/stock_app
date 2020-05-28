@@ -16,5 +16,5 @@ def joined(message):
 @socketio.on('text', namespace='/chat')
 def text(message):
     room = session.get('room')
-    ticker = pdr.get_data_yahoo(message["msg"],start="2017-01-01", end="2017-04-30")
+    ticker = pdr.get_data_yahoo(message["value"],start=message['start'], end=message['end'])
     emit('message', {'msg': ticker.to_json(orient='table')}, room=room)

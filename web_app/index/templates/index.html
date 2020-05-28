@@ -13,12 +13,13 @@
 
     <h4>Session -  {{ room }}</h4>
 
-    <svg class="targetsvg"></svg>
-    <div id="scatter_area"></div>
+    <div id="scatter_area" style="width:100%"></div>
 
 
 
     <input value="" name="" id="stock_input" placeholder="Add ticket symbol">
+    <input type="date" id="start" name="start">
+    <input type="date" id="end" name="end">
     <button id="check_ticker">Check</button>
 
 
@@ -36,7 +37,6 @@
 
     socket.on('message', function(data) {
         console.log("JSON MESSAGE:", JSON.parse(data.msg))
-      //  console.log("OBJECT DATA:", Object.keys(data.msg))
         createGraph(JSON.parse(data.msg).data)
 
     });
@@ -44,14 +44,22 @@
     document.getElementById("check_ticker").addEventListener("click", checkTicker)
     function checkTicker(){
         var ticker = document.getElementById("stock_input")
-        socket.emit('text', {msg: ticker.value});
+        var start = document.getElementById("start")
+        var end = document.getElementById("end")
+        socket.emit('text', {value: ticker.value, start:start.value, end:end.value});
     }
 
 
 </script>
   <script>
     function createGraph(data){
-    var svg = d3.select("#scatter_area").append("svg").attr("width", 960).attr("height", 300)
+
+    var margin = {top: 10, right: 40, bottom: 30, left: 30},
+    width = 2000 - margin.left - margin.right,
+    height = 400 - margin.top - margin.bottom;
+
+
+    var svg = d3.select("#scatter_area").append("svg").attr("width", width).attr("height", height)
 
     var margin = {left:30, right:30, top: 10, bottom: 20}
     var width = svg.attr("width") - margin.left - margin.right;

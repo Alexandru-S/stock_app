@@ -28,7 +28,7 @@
         <script type="text/javascript" src="{{ url_for('static', filename='js/mdb.min.js') }}"></script>
 
     </head>
-    <body>
+    <body style="overflow-y : auto;">
 
         {% include 'nav.html' %}
         <main>{% block body %}{% endblock %}</main>

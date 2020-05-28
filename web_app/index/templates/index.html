@@ -9,11 +9,18 @@
       stroke: steelblue;
       stroke-width: 1.5px;
     }
+
+    .my-custom-scrollbar {
+  position: relative;
+  width: 800px;
+  height: 400px;
+  overflow: auto;
+}
   </style>
 
     <h4>Session -  {{ room }}</h4>
 
-    <div id="scatter_area" style="width:100%"></div>
+    <div class="my-custom-scrollbar my-custom-scrollbar-primary" id="scatter_area" style="width:100%;overflow-y:scroll;"></div>
 
 
 
@@ -28,6 +35,23 @@
 <script src="https://d3js.org/d3.v5.js"></script>
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script>
+
+<script>
+
+var myCustomScrollbar = document.querySelector('.my-custom-scrollbar');
+var ps = new PerfectScrollbar(myCustomScrollbar);
+
+var scrollbarY = myCustomScrollbar.querySelector('.ps__rail-y');
+
+myCustomScrollbar.onscroll = function () {
+  scrollbarY.style.cssText = `top: ${this.scrollTop}px!important; height: 400px; right: ${-this.scrollLeft}px`;
+}
+
+</script>
+
+
+
+
 <script type="text/javascript" charset="utf-8">
 
     socket = io.connect('http://' + document.domain + ':' + location.port + '/chat');

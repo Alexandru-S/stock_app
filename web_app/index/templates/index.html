@@ -4,6 +4,9 @@
     <h4>Session -  {{ room }}</h4>
 
     <svg class="targetsvg"></svg>
+    <div id="scatter_area"></div>
+
+
 
     <input value="" name="" id="stock_input" placeholder="Add ticket symbol">
     <button id="check_ticker">Check</button>
@@ -13,44 +16,73 @@
 <!-- Load d3.js -->
 <script src="https://d3js.org/d3.v5.js"></script>
 
+<script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script>
+<script type="text/javascript" charset="utf-8">
 
-<script>
-var svg = d3.select(".targetsvg")
-svg.append("circle")
-  .attr("cx", 2).attr("cy", 2).attr("r", 40).style("fill", "blue");
-svg.append("circle")
-  .attr("cx", 140).attr("cy", 70).attr("r", 40).style("fill", "red");
-svg.append("circle")
-  .attr("cx", 300).attr("cy", 100).attr("r", 40).style("fill", "green");
+    socket = io.connect('http://' + document.domain + ':' + location.port + '/chat');
+    socket.on('connect', function() {
+        socket.emit('joined', {});
+    });
+
+    socket.on('message', function(data) {
+        console.log("JSON MESSAGE:", JSON.parse(data.msg))
+        console.log("OBJECT DATA:", Object.keys(data.msg))
+        createGraph(JSON.parse(data.msg))
+
+    });
+
+    document.getElementById("check_ticker").addEventListener("click", checkTicker)
+    function checkTicker(){
+        var ticker = document.getElementById("stock_input")
+        socket.emit('text', {msg: ticker.value});
+    }
+
+
 </script>
 
+<script>
+function createGraph(data){
+// set the dimensions and margins of the graph
+var margin = {top: 10, right: 40, bottom: 30, left: 30};
+    var width = 450 - margin.left - margin.right;
+    var height = 400 - margin.top - margin.bottom;
 
+// append the svg object to the body of the page
+var svG = d3.select("#scatter_area")
+  .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform",
+          "translate(" + margin.left + "," + margin.top + ")");
 
+// Create data
+//var data = [ {x:10, y:20}, {x:40, y:90}, {x:80, y:50} ]
+console.log("-1-1-1-1-1-1-1-1-1-", data.data[0].Date)
+// X scale and Axis
+var x = d3.scaleTime().domain([0, data.data[data.data.length -1].High]).range([0, width]);
 
+svG.append('g').attr("transform", "translate(0," + height + ")").call(d3.axisBottom(x));
 
-    <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script>
-    <script type="text/javascript" charset="utf-8">
+// X scale and Axis
+var y = d3.scaleLinear()
+    .domain([0, data.data[data.data.length -1].High])         // This is the min and the max of the data: 0 to 100 if percentages
+    .range([height, 0]);       // This is the corresponding value I want in Pixel
 
-        socket = io.connect('http://' + document.domain + ':' + location.port + '/chat');
-        socket.on('connect', function() {
-            socket.emit('joined', {});
-        });
+svG.append('g').call(d3.axisLeft(y));
 
-        socket.on('message', function(data) {
-            console.log("JSON MESSAGE:", JSON.parse(data.msg))
-            console.log("OBJECT DATA:", Object.keys(data.msg))
+// Add 3 dots for 0, 50 and 100%
+svG
+  .selectAll("whatever")
+  .data(data)
+  .enter()
+  .append("circle")
+    .attr("cx", function(d){ return x(d.x) })
+    .attr("cy", function(d){ return y(d.y) })
+    .attr("r", 7)
+}
 
-        });
-
-        document.getElementById("check_ticker").addEventListener("click", checkTicker)
-        function checkTicker(){
-            var ticker = document.getElementById("stock_input")
-            socket.emit('text', {msg: ticker.value});
-        }
-
-
-    </script>
-
+</script>
 
 
 {% endblock %}

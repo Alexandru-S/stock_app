@@ -1,6 +1,16 @@
 {% extends "base.html" %}
 {% block body %}
 
+  <style>
+    body { margin:0;position:fixed;top:0;right:0;bottom:0;left:0; }
+
+    .line {
+      fill: none;
+      stroke: steelblue;
+      stroke-width: 1.5px;
+    }
+  </style>
+
     <h4>Session -  {{ room }}</h4>
 
     <svg class="targetsvg"></svg>
@@ -26,8 +36,8 @@
 
     socket.on('message', function(data) {
         console.log("JSON MESSAGE:", JSON.parse(data.msg))
-        console.log("OBJECT DATA:", Object.keys(data.msg))
-        createGraph(JSON.parse(data.msg))
+      //  console.log("OBJECT DATA:", Object.keys(data.msg))
+        createGraph(JSON.parse(data.msg).data)
 
     });
 
@@ -39,50 +49,64 @@
 
 
 </script>
+  <script>
+    function createGraph(data){
+    var svg = d3.select("#scatter_area").append("svg").attr("width", 960).attr("height", 300)
 
-<script>
-function createGraph(data){
-// set the dimensions and margins of the graph
-var margin = {top: 10, right: 40, bottom: 30, left: 30};
-    var width = 450 - margin.left - margin.right;
-    var height = 400 - margin.top - margin.bottom;
+    var margin = {left:30, right:30, top: 10, bottom: 20}
+    var width = svg.attr("width") - margin.left - margin.right;
+    var height = svg.attr("height") - margin.bottom - margin.top;
 
-// append the svg object to the body of the page
-var svG = d3.select("#scatter_area")
-  .append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-  .append("g")
-    .attr("transform",
-          "translate(" + margin.left + "," + margin.top + ")");
+    var x = d3.scaleTime().rangeRound([0, width]);
+    var x_axis = d3.axisBottom(x);
 
-// Create data
-//var data = [ {x:10, y:20}, {x:40, y:90}, {x:80, y:50} ]
-console.log("-1-1-1-1-1-1-1-1-1-", data.data[0].Date)
-// X scale and Axis
-var x = d3.scaleTime().domain([0, data.data[data.data.length -1].High]).range([0, width]);
+    var y = d3.scaleLinear()
+    	.rangeRound([height, 0]);
+    var y_axis = d3.axisBottom(y);
+    var xFormat = "%Y-%b-%d";
+    var parseTime = d3.utcParse("%Y-%m-%dT%H:%M:%S.%LZ");
 
-svG.append('g').attr("transform", "translate(0," + height + ")").call(d3.axisBottom(x));
+    x.domain(d3.extent(data, function(d) {return parseTime(d.Date); }));
+  	y.domain([0,
+              d3.max(data, function(d) {
+                return d3.max([d.Open, d.Close, d.High, d.Low]);
+              })]);
 
-// X scale and Axis
-var y = d3.scaleLinear()
-    .domain([0, data.data[data.data.length -1].High])         // This is the min and the max of the data: 0 to 100 if percentages
-    .range([height, 0]);       // This is the corresponding value I want in Pixel
+    var a = function(d) {return d.a};
 
-svG.append('g').call(d3.axisLeft(y));
+    var multiline = function(category) {
+      var line = d3.line()
+                  .x(function(d) {
+                  return x(parseTime(d.Date)); })
+                  .y(function(d) { return y(d[category]); });
+      return line;
+    }
 
-// Add 3 dots for 0, 50 and 100%
-svG
-  .selectAll("whatever")
-  .data(data)
-  .enter()
-  .append("circle")
-    .attr("cx", function(d){ return x(d.x) })
-    .attr("cy", function(d){ return y(d.y) })
-    .attr("r", 7)
+
+
+    var categories = ['Open', 'Close', 'High', 'Low'];
+    //var color = d3.scale.category10();  // escala com 10 cores (category10)
+    var color = d3.scaleOrdinal(d3.schemeCategory10);
+
+    var g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    for (i in categories) {
+      var lineFunction = multiline(categories[i]);
+      g.append("path").datum(data)
+        .attr("class", "line")
+        .style("stroke", color(i))
+        .attr("d", lineFunction);
+    }
+
+      // Add the X Axis
+  		g.append("g")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(x).tickFormat(d3.timeFormat(xFormat)));
+
+      // Add the Y Axis
+  		g.append("g").call(d3.axisLeft(y));
 }
-
-</script>
+  </script>
 
 
 {% endblock %}

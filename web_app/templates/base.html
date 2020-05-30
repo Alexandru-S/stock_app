@@ -15,7 +15,6 @@
         <!-- Your custom styles (optional) -->
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
         <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
-
         <!-- SCRIPTS -->
         <!-- JQuery -->
         <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
@@ -26,10 +25,8 @@
         <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
         <!-- MDB core JavaScript -->
         <script type="text/javascript" src="{{ url_for('static', filename='js/mdb.min.js') }}"></script>
-
     </head>
     <body style="overflow-y : auto;">
-
         {% include 'nav.html' %}
         <main>{% block body %}{% endblock %}</main>
         {% include 'footer.html' %}

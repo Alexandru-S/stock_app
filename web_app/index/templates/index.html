@@ -1,35 +1,16 @@
 {% extends "base.html" %}
 {% block body %}
 
-  <style>
-    body { margin:0;position:fixed;top:0;right:0;bottom:0;left:0; }
-
-    .line {
-      fill: none;
-      stroke: steelblue;
-      stroke-width: 1.5px;
-    }
-
-    .my-custom-scrollbar {
-  position: relative;
-  width: 800px;
-  height: 400px;
-  overflow: auto;
-}
-  </style>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 
     <h4>Session -  {{ room }}</h4>
 
     <div class="my-custom-scrollbar my-custom-scrollbar-primary" id="scatter_area" style="width:100%;overflow-y:scroll;"></div>
 
-
-
     <input value="" name="" id="stock_input" placeholder="Add ticket symbol">
     <input type="date" id="start" name="start" placeholder="Start Date">
     <input type="date" id="end" name="end" placeholder="End Date">
     <button id="check_ticker">Check</button>
-
-
 
 <!-- Load d3.js -->
 <script src="https://d3js.org/d3.v5.js"></script>

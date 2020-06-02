@@ -81,7 +81,7 @@
     x.domain(d3.extent(data, function(d) {return parseTime(d.Date); }));
   	y.domain([0,
               d3.max(data, function(d) {
-                return d3.max([d.Open, d.Close, d.High, d.Low]);
+                return d3.max([d.Open, d['Adj Close'], d.High, d.Low]);
               })]);
 
     var a = function(d) {return d.a};
@@ -96,8 +96,7 @@
 
 
 
-    var categories = ['Open', 'Close', 'High', 'Low'];
-    //var color = d3.scale.category10();  // escala com 10 cores (category10)
+    var categories = ['Open', 'Adj Close', 'High', 'Low'];
     var color = d3.scaleOrdinal(d3.schemeCategory10);
 
     var g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");

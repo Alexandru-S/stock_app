@@ -62,7 +62,6 @@
       width = 2000 - margin.left - margin.right,
       height = 400 - margin.top - margin.bottom;
 
-
       var svg = d3.select("#scatter_area").append("svg").attr("width", width).attr("height", height)
 
       var margin = {left:30, right:30, top: 10, bottom: 20}
@@ -79,19 +78,19 @@
       var parseTime = d3.utcParse("%Y-%m-%dT%H:%M:%S.%LZ");
 
       x.domain(d3.extent(data, function(d) {return parseTime(d.Date); }));
-      y.domain([0,
-                d3.max(data, function(d) {
+      y.domain([0, d3.max(data, function(d) {
                   return d3.max([d.Open, d['Adj Close'], d.High, d.Low]);
                 })]);
 
       var a = function(d) {return d.a};
 
       var multiline = function(category) {
-        var line = d3.line()
-                    .x(function(d) {
-                    return x(parseTime(d.Date)); })
-                    .y(function(d) { return y(d[category]); });
-        return line;
+        return  d3.line().x(function(d) {
+                            return x(parseTime(d.Date));
+                          })
+                          .y(function(d) {
+                            return y(d[category]);
+                          });
       }
 
 
@@ -107,7 +106,26 @@
           .attr("class", "line")
           .style("stroke", color(i))
           .attr("d", lineFunction);
+
+
+        ycoord = (i+1)*2 + 97
+        g.append("g").append("text")
+          .attr("x", $('svg').width()/2)
+          .attr("y", ycoord)
+          .attr("text-anchor", "middle")
+          .style("font-weight", "bold")
+          .style("font-size", 12)
+          .style("stroke", color(i))
+          .text(categories[i]);
+
+
+
+
+
+
       }
+
+
 
         // Add the X Axis
           g.append("g")
@@ -116,7 +134,9 @@
 
         // Add the Y Axis
           g.append("g").call(d3.axisLeft(y));
-  }
+
+
+}
   </script>
 
 

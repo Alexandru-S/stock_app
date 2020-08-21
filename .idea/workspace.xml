@@ -21,7 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="24c3907c-40e9-480f-8e9f-e6eb59038bc0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_app/index/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/index/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,13 +49,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Code_Solutions" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/web_app/static/img/favicon_ico" />
     </key>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -86,9 +86,9 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="318" y="145" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1589140986078">
-      <screen x="0" y="23" width="1280" height="777" />
+    <state x="235" y="362" width="424" height="491" key="FileChooserDialogImpl" timestamp="1598016236924">
+      <screen x="0" y="27" width="1920" height="1173" />
     </state>
-    <state x="318" y="145" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1280.777/-2560.-568.2560.1417@0.23.1280.777" timestamp="1589140986078" />
+    <state x="235" y="362" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1173@0.27.1920.1173" timestamp="1598016236924" />
   </component>
 </project>

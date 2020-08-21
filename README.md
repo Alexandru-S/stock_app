@@ -2,7 +2,7 @@
 
 A basic stock app showing an integration of Flask, yahoo-finance, socket.io and d3.js graphs
 
-# HOW TO RUN
+## HOW TO RUN
 git clone https://github.com/Alexandru-S/stock_app.git
 
 cd finance_app

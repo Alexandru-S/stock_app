@@ -1,7 +1,6 @@
-from flask import redirect, url_for, render_template, request
+from flask import url_for, render_template, request
 from . import index_blueprint
 from random import randint
-from .forms import LoginForm
 
 
 @index_blueprint.route('/', methods=['GET', 'POST'])

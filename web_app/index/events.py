@@ -17,4 +17,6 @@ def joined(message):
 def text(message):
     room = session.get('room')
     ticker = pdr.get_data_yahoo(message["value"],start=message['start'], end=message['end'])
-    emit('message', {'msg': ticker.to_json(orient='table')}, room=room)
+    data = yf.download(tickers="SPY AAPL MSFT",period="1d",interval="1m",group_by='ticker',auto_adjust=True,prepost=True,threads=True,proxy=None)
+    print('-----------------------------------', data)
+    emit('message', {'msg': data.to_json(orient='table')}, room=room)

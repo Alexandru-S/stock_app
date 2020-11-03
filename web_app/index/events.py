@@ -18,5 +18,5 @@ def text(message):
     room = session.get('room')
     ticker = pdr.get_data_yahoo(message["value"],start=message['start'], end=message['end'])
     data = yf.download(tickers="SPY AAPL MSFT",period="1d",interval="1m",group_by='ticker',auto_adjust=True,prepost=True,threads=True,proxy=None)
-    print('-----------------------------------', data)
+    print('data', data)
     emit('message', {'msg': data.to_json(orient='table')}, room=room)

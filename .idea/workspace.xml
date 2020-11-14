@@ -20,13 +20,105 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="24c3907c-40e9-480f-8e9f-e6eb59038bc0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/stock_app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/stock_app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_app/index/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/index/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_app/index/events.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/index/events.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_app/index/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/index/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/index/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/index/events.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/index/forms.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/index/static/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/index/static/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/index/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/index/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/css/addons/datatables-select.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/css/addons/datatables-select.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/css/addons/datatables-select2.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/css/addons/datatables-select2.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/css/addons/datatables.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/css/addons/datatables.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/css/addons/datatables2.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/css/addons/datatables2.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/css/addons/directives.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/css/addons/directives.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/css/addons/flag.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/css/addons/flag.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/css/addons/jquery.zmd.hierarchical-display.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/css/addons/jquery.zmd.hierarchical-display.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/css/addons/rating.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/css/addons/rating.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/css/mdb.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/css/mdb.lite.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/css/mdb.lite.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/css/mdb.lite.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/css/mdb.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/css/mdb.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/css/modules/animations-extended.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/css/modules/animations-extended.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/img/favicon_ico/android-chrome-192x192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/img/favicon_ico/android-chrome-512x512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/img/favicon_ico/apple-touch-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/img/favicon_ico/favicon-16x16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/img/favicon_ico/favicon-32x32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/img/favicon_ico/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/img/favicon_ico/site.webmanifest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/img/mdb-favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/img/overlays/01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/img/overlays/02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/img/overlays/03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/img/overlays/04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/img/overlays/05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/img/overlays/06.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/img/overlays/07.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/img/overlays/08.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/img/overlays/09.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/img/svg/arrow_left.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/img/svg/arrow_right.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/js/addons/datatables-select.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/js/addons/datatables-select.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/js/addons/datatables-select2.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/js/addons/datatables-select2.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/js/addons/datatables.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/js/addons/datatables.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/js/addons/datatables2.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/js/addons/datatables2.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/js/addons/directives.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/js/addons/directives.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/js/addons/flag.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/js/addons/flag.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/js/addons/imagesloaded.pkgd.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/js/addons/imagesloaded.pkgd.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/js/addons/jquery.zmd.hierarchical-display.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/js/addons/jquery.zmd.hierarchical-display.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/js/addons/masonry.pkgd.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/js/addons/masonry.pkgd.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/js/addons/rating.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/js/addons/rating.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/js/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/js/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/js/mdb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/js/mdb.lite.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/js/mdb.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/js/mdb.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/js/modules/animations-extended.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/js/modules/animations-extended.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/js/modules/forms-free.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/js/modules/forms-free.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/js/modules/scrolling-navbar.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/js/modules/scrolling-navbar.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/js/modules/treeview.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/js/modules/treeview.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/js/modules/wow.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/js/modules/wow.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/js/popper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/static/js/popper.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/templates/base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/templates/footer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/templates/nav.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +147,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../website" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -92,9 +184,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="235" y="362" width="424" height="491" key="FileChooserDialogImpl" timestamp="1598131409231">
-      <screen x="0" y="27" width="1920" height="1173" />
+    <state x="313" y="602" width="424" height="491" key="FileChooserDialogImpl" timestamp="1604860911554">
+      <screen x="0" y="267" width="2560" height="1173" />
     </state>
     <state x="235" y="362" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1173@0.27.1920.1173" timestamp="1598131409231" />
+    <state x="313" y="602" key="FileChooserDialogImpl/2560.240.1920.1200/0.267.2560.1173@0.267.2560.1173" timestamp="1604860911554" />
   </component>
 </project>

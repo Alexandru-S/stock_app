@@ -1,11 +1,11 @@
 # stock_app
 
-A basic stock app showing an integration of Flask, yahoo-finance, socket.io and d3.js graphs
+A basic stock app showing an integration of graphs
 
 ## HOW TO RUN
 `git clone <https://github.com/Alexandru-S/stock_app.git>`
 
-`cd finance_app`
+`cd stock_app`
 
 `virtualenv --python python3 env3`
 
